@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin | Library Book Store</title>
+  <link rel="shortcut icon" href="../assents/icons/book.svg" type="image/x-icon" />
+
+  <!--Bootstrap Link-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" />
+  <link rel="stylesheet" href="../styles/general/global.css" />
+  <link rel="stylesheet" href="../styles/pages/admin.css" />
+  <link rel="stylesheet" href="../styles/response/adminResponse.css" />
+
+</head>
+
+<body>
+  <main>
+    <!--section -1-->
+
+    <section id="section-1">
+      <div id="section-logo">
+        <img src="../assents/images/logo-group.svg" alt="" id="logoPicture" />
+      </div>
+
+      <div id="section-form">
+        <h2 id="form-Name">Welcome Admin</h2>
+
+        <div id="form-input">
+          <input type="email" placeholder="Username" id="userName" />
+          <input type="password" placeholder="Password" id="password" />
+          <button id="btn">Join</button>
+        </div>
+      </div>
+    </section>
+
+    <!--For Responsive-->
+    <section id="section-top">
+      <div class="d-flex justify-content-around align-items-center">
+        <div id="logo-responsive">
+          <img src="../assents/icons/logo-color.svg" alt="" />
+        </div>
+        <div id="hamburger" id="hamburger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <img src="../assents/icons/hambuger.svg" alt="" />
+        </div>
+      </div>
+      <!--Modal-->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header" id="bgColor">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="bgColor">
+              <div>
+                <div id="image">
+                  <img src="../assents/images/logo-group.svg" alt="" />
+                </div>
+                <div id="pages">
+                  <img src="../assents/icons/book.svg" alt="" id="page-image" />
+                  <a id="'test" href="#home">Home</a>
+                </div>
+                <div id="pages">
+                  <img src="../assents/icons/book.svg" alt="" id="page-image" />
+                  <a href="#about">About</a>
+                </div>
+                <div id="pages">
+                  <img src="../assents/icons/book.svg" alt="" id="page-image" />
+                  <a href="#Join">Join us</a>
+                </div>
+                <div id="pages">
+                  <img src="../assents/icons/book.svg" alt="" id="page-image" />
+                  <a href="#contact">Contact</a>
+                </div>
+                <div id="pages">
+                  <img src="../assents/icons/book.svg" alt="" id="page-image" />
+                  <a id="logout">Logout </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--section -2-->
+
+    <section id="section-2" style="display: none">
+      <div id="left-section">
+        <div id="image">
+          <img src="../assents/images/logo-group.svg" alt="" />
+        </div>
+        <div id="pages">
+          <img src="../assents/icons/book.svg" alt="" id="page-image" />
+          <a href="#home">Home</a>
+        </div>
+        <div id="pages">
+          <img src="../assents/icons/book.svg" alt="" id="page-image" />
+          <a href="#about">About</a>
+        </div>
+        <div id="pages">
+          <img src="../assents/icons/book.svg" alt="" id="page-image" />
+          <a href="#Join">Join us</a>
+        </div>
+        <div id="pages">
+          <img src="../assents/icons/book.svg" alt="" id="page-image" />
+          <a href="#contact">Contact</a>
+        </div>
+        <div id="pages">
+          <img src="../assents/icons/book.svg" alt="" id="page-image" />
+          <a id="logout">Logout</a>
+        </div>
+      </div>
+      <div id="main-section">
+        <h2 id="bookheader">Add Book</h2>
+        <label for="bookName" id="search-book">Search book</label> <br />
+        <div class="main-section-1" id="home">
+          <div id="input">
+            <input type="text" id="bookName" placeholder="Dan Brown" />
+            <span id="span-img"><img src="../assents/icons/search.svg" alt="" /></span>
+          </div>
+          <div class="search-informations">
+            <div class="search-information">
+              <img src="../assents/icons/oclock1.svg" alt="" />
+              <span>Dan Brown Davinc</span>
+            </div>
+            <div class="search-information">
+              <img src="../assents/icons/oclock2.svg" alt="" />
+              <span>Dan Brown Davinc</span>
+            </div>
+          </div>
+        </div>
+
+        <div id="form-section-1" class="w-100">
+          <h3 id="about-store-title">Book form</h3>
+          <form action="" id="form-1">
+            <label for="Angels" class="form-label mt-2">Book Name</label>
+            <br />
+            <input id="Angels" type="text" class="form-control" placeholder="Angels" aria-label="Angels"
+              aria-describedby="addon-wrapping" />
+            <br />
+            <label for="Dan Brown" class="form-label mt-2">Author Name</label>
+            <br />
+            <input id="Dan Brown" type="text" class="form-control" placeholder="Dan Brown" aria-label="Dan Brown"
+              aria-describedby="addon-wrapping" />
+            <br />
+            <label for="Job" class="form-label mt-2">Book Image Url</label>
+            <br />
+            <input id="Book Image Url" type="text" class="form-control" placeholder="Alex Smith"
+              aria-label="Book Image Url" aria-describedby="addon-wrapping" />
+            <br />
+            <div class="mb-3">
+              <label for="textArea" class="form-label">Description</label>
+              <textarea class="form-control" id="textArea" rows="3"
+                placeholder="We work without holidays and weekends! Resident...We work without holidays and weekends! Resident...We work without holidays and weekends! Resident..."></textarea>
+            </div>
+            <label for="Book Type" class="form-label mt-2">Book Type</label>
+            <br />
+            <input id="Book Type" type="text" class="form-control" placeholder=" Fantastic" aria-label="Book Type"
+              aria-describedby="addon-wrapping" />
+            <br />
+            <button type="submit" class="btn mt-2 w-100" id="submit">
+              Add
+            </button>
+          </form>
+        </div>
+        <div id="about" class="w-100 form-section-2">
+          <h3 id="about-store-title">About Store</h3>
+          <form action="" id="form-2">
+            <label for="About Store" class="form-label mt-2">Title</label>
+            <br />
+            <input id="About Store" type="text" class="form-control" placeholder="About Store" aria-label="About Store"
+              aria-describedby="addon-wrapping" />
+            <br />
+            <label for="BookImageUrl" class="form-label mt-2">Book Image Url</label>
+            <br />
+            <input id="BookImageUrl" type="text" class="form-control" placeholder="https://image:url/"
+              aria-label="BookImageUrl" aria-describedby="addon-wrapping" />
+            <br />
+
+            <div class="mb-3">
+              <label for="textArea" class="form-label">Description</label>
+              <textarea class="form-control" id="textArea" rows="3"
+                placeholder="We work without holidays and weekends! Resident...We work without holidays and weekends! Resident...We work without holidays and weekends! Resident..."></textarea>
+            </div>
+            <button type="submit" class="btn mt-2 w-100" id="submit">
+              Add
+            </button>
+          </form>
+        </div>
+        <div id="Join" class="table-section-1">
+          <h4 class="mb-3" id="table-name">Join Us</h4>
+          <table class="table table-hover">
+            <thead id="thead">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Full Name</th>
+                <th scope="col">Email Address</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Audrey Mckinney</td>
+                <td>lisa.watson@example.com</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Morris Cooper</td>
+                <td>terra.hamilton@example.com</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Savannah Howard</td>
+                <td>@jeff.brown@example.com</td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>Victoria Lane</td>
+                <td>deanna.curtis@example.com</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h4 class="h3 mt-5 mb-2" id="contact">Contact Us</h4>
+
+        <div id="table-section-2" class="w-100 mb-5">
+          <table class="table table-hover">
+            <thead id="thead">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Full Name</th>
+                <th scope="col">Address</th>
+                <th scope="col">Email Address</th>
+                <th scope="col">Phone Number</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Audrey Mckinney</td>
+                <td>1473 Ranchview Dr undefined San Jose</td>
+                <td>lisa.watson@example.com</td>
+                <td>(209) 555-0104</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Savannah Howard</td>
+                <td>8445 Railroad St undefined Tampa</td>
+                <td>jeff.brown@example.com</td>
+                <td>(201) 555-0124</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Morris Cooper</td>
+                <td>8584 W Sherman Dr undefined Desoto</td>
+                <td>terra.hamilton@example.com</td>
+                <td>(505) 555-0125</td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>Victoria Lane</td>
+                <td>1921 Ranchview Dr undefined San Francisco</td>
+                <td>deanna.curtis@example.com</td>
+                <td>(704) 555-0127</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div id="right-section">
+        <img src="../assents/icons/human.svg" alt="" />
+        <span>Admin</span>
+      </div>
+    </section>
+  </main>
+  <!--bootstrap JS-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+    integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+  <script src="../js/firebaseJs/db.js"></script>
+
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+    import {
+      getAuth,
+      signInWithEmailAndPassword,
+      onAuthStateChanged,
+      signOut
+    } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // const firebaseConfig = {
+    //   apiKey: "AIzaSyD84O_Gy5jdZfcYfergx2kPBu5-APNQ3ug",
+    //   authDomain: "library-project-ad153.firebaseapp.com",
+    //   databaseURL: "https://library-project-ad153-default-rtdb.europe-west1.firebasedatabase.app",
+    //   projectId: "library-project-ad153",
+    //   storageBucket: "library-project-ad153.appspot.com",
+    //   messagingSenderId: "209210870711",
+    //   appId: "1:209210870711:web:3446eaacf65c7f1e6a7632"
+    // };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app)
+
+
+    const Mybody = document.querySelector("body")
+    const email = document.querySelector("#userName")
+    const password = document.querySelector("#password")
+    const btn = document.querySelector("#btn")
+    const sectionForm = document.querySelector("#section-form")
+    const section1 = document.querySelector("#section-1")
+    const section2 = document.querySelector("#section-2")
+    const sectionTop = document.querySelector("#section-top")
+    const leftSection = document.querySelector("#left-section")
+    const rightSection = document.querySelector("#right-section")
+    const hamburger = document.querySelector("#hamburger")
+
+    const bodyPx = Mybody.clientWidth
+    // const logoutButton = document.getElementById("logout");
+
+
+
+    $(document).ready(function() {
+  toastr.options = {
+    closeButton: false,
+    debug: false,
+    newestOnTop: false,
+    progressBar: false,
+    positionClass: 'toast-top-right',
+    preventDuplicates: false,
+    onclick: null,
+    showDuration: '300',
+    hideDuration: '1000',
+    timeOut: '1000',
+    extendedTimeOut: '1000',
+    showEasing: 'swing',
+    hideEasing: 'linear',
+    showMethod: 'fadeIn',
+    hideMethod: 'fadeOut'
+  };
+});
+
+
+
+
+
+    const userSignIn = async () => {
+      const signInEmail = email.value
+      const signInPassword = password.value
+      signInWithEmailAndPassword(auth, signInEmail, signInPassword)
+        .then((userCredential) => {
+          const user = userCredential.user
+          // Msg.success('success message', timeout);
+          toastr.success('You have signed in successfully!');
+
+
+        })
+        .catch((error) => {
+          const errorCode = error.code
+          const errorMessage = error.message
+          toastr.warning('Please fill the blank area!');
+        })
+    }
+
+    const checkAuthState = async () => {
+      onAuthStateChanged(auth, user => {
+        if (user) {
+
+          setTimeout(() => {
+
+            document.querySelector("body").style.background = "white"
+            section1.style.display = "none"
+            section2.style.display = " block"
+            section2.style.display = " flex"
+
+            if (bodyPx <= 480) {
+              sectionTop.style.display = " block"
+              leftSection.style.display = "none"
+              rightSection.style.display = "none"
+            }
+
+
+
+          }, 1500);
+        }
+        // else {
+        //   section1.style.display = "block"
+        //   section2.style.display = "none"
+        //   section2.style.display = " flex"
+
+        //   if(bodyPx <= 480){
+        //     section1.style.display = "block"
+        //     section2.style.display = "none"
+        //     rightSection.style.display = "none"
+        //   }
+        // }
+      })
+    }
+
+    const userSignOut = async () => {
+      await signOut(auth)
+      setTimeout(() => {
+
+        window.location.reload()
+
+      }, 1500)
+      toastr.warning('You have logged out!');
+
+    }
+
+    $(document).ready(function(){
+      $(document).on('click', "#logout", userSignOut)
+
+    })
+
+    checkAuthState()
+
+    btn.addEventListener('click', userSignIn)
+
+
+
+
+
+
+    function showAlert(type, message) {
+      /*
+
+                <div class="alert alert-danger" role="alert">
+                  A simple danger alert—check it out!
+                </div>
+      */
+      let styles = {
+        "display": "block",
+        "position": "absolute",
+        "bottom": "15px",
+        "width": "90%",
+        "height": "45px"
+      };
+      let alert = document.createElement("div");
+      alert.className = `alert alert-${type}  role ="alert" myAlert`;
+      alert.textContent = message;
+      Object.assign(alert.style, styles);
+      //console.log(alert);
+      sectionForm.appendChild(alert);
+
+      setTimeout(function () {
+        alert.remove();
+      }, 2000);
+
+
+    }
+  </script>
+</body>
+
+</html>

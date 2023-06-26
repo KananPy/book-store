@@ -1,0 +1,353 @@
+body {
+    position: relative;
+    background-color: #720418;
+    min-height: 100vh;
+
+  }
+  
+  
+  
+  #section-logo {
+    margin-left: 20px;
+  }
+  #section-form {
+    position: absolute;
+    background-color: #ffffff;
+    width: 400px;
+    height: 480px;
+    left: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 0.3rem;
+    margin-bottom: 10px;
+    margin-top: 50px;
+  }
+  #form-Name {
+    font-size: 44px;
+    font-weight: 700;
+    letter-spacing: 0em;
+    color: #000000;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  #form-input {
+    width: 100%;
+  }
+  #form-input input {
+    display: block;
+    width: 100%;
+    height: 42px;
+    margin-bottom: 30px;
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: 0.3rem;
+  }
+  input:first-child {
+    margin-bottom: 30px;
+  }
+  ::-webkit-input-placeholder {
+    color: #797667;
+    font-family: "Crimson Text", serif;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0em;
+    padding-left: 8px;
+    padding-top: 9px;
+    padding-bottom: 10px;
+  }
+  #btn {
+    display: block;
+    width: 100%;
+    background: linear-gradient(0deg, #e16a00, #e16a00),
+      linear-gradient(0deg, #cecece, #cecece);
+    color: var(--textColor);
+    font-family: "Crimson Text", serif;
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 0em;
+    padding: 12px;
+    border-radius: 5px;
+  }
+  
+  /* section-top for responsive */
+ #section-top{
+  display: none;
+ }
+  /* section -2 */
+  
+  #section-2 {
+    display: flex;
+    margin-bottom: 100px;
+  }
+  #left-section {
+    background-color: var(--bgColor);
+    width: 355px;
+    padding-left: 35px;
+    padding-top: 85.08px;
+  }
+  #image {
+    margin-bottom: 62.53px;
+  }
+  #pages {
+    display: flex;
+    align-items: center;
+    margin-bottom: 33.9px;
+  }
+  #pages a {
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 35px;
+    color: #ffffff;
+  }
+  #pages a:hover {
+    border-bottom: 1 px solid #e16a00;
+    color: #e16a00;
+  }
+  #page-image {
+    margin-right: 12.59px;
+  }
+  
+  #main-section {
+    width: 62%;
+    padding-top: 145px;
+    padding-left: 33px;
+  }
+  #bookheader {
+    margin-bottom: 26px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 59px;
+    letter-spacing: 0em;
+    color: #333333;
+  }
+  
+  #search-book {
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 35px;
+    letter-spacing: 0em;
+    color: #333333;
+  }
+  #input {
+    margin-top: 12px;
+    margin-right: 7px;
+    display: flex;
+  }
+  #bookName {
+    width: 395px;
+    height: 41px;
+    border-radius: 34px;
+    margin-right: 7px;
+  }
+  #bookName::placeholder {
+    font-family: "Preahvihear", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0em;
+    color: #adadad;
+  }
+  .main-section-1 {
+    position: relative;
+  }
+  
+  #span-img {
+    width: 63px;
+    height: 40px;
+    background: #ff8b00;
+    border-radius: 34px;
+    gap: 10px;
+    text-align: center;
+    padding-top: 8.44px;
+  }
+  .search-informations {
+    position: absolute;
+    top: 48px;
+    height: 85px;
+    width: 388px;
+    border-radius: 35px;
+    background: #f1f0f0;
+    padding-left: 37.25px;
+    padding-top: 12px;
+    font-family: "Preahvihear", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0em;
+    color: #bcbcbc;
+  }
+  .search-information {
+    display: flex;
+    align-items: center;
+  }
+  .search-information img {
+    margin-right: 29px;
+  }
+  
+  .search-information span {
+    font-family: "Preahvihear", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0em;
+  }
+  #about-store-title {
+    margin-bottom: 17px;
+    padding-top: 81px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 35px;
+    letter-spacing: 0em;
+    color: #333333;
+  }
+  #form-section-1 {
+    margin-top: 92px;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    color: #030102;
+  }
+  
+  #form-1 input::placeholder {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    color: #030102;
+  }
+  #textarea::placeholder {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    color: #030102;
+  }
+  input {
+    display: block;
+    height: 40px;
+    left: 0px;
+    top: 29px;
+    border-radius: 10px;
+    padding: 8px 12px 8px 12px;
+  }
+  #form-2 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    color: #030102;
+  }
+  #form-2 input::placeholder {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    color: #030102;
+  }
+  
+  .btn {
+    background: #ff8b00;
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+  }
+  .form-section-2 {
+    margin-top: 92px;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    color: #030102;
+  }
+  #table-section-1 {
+    margin-top: 92px;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+    color: #05111a;
+    width: 75%;
+  }
+  #table-name {
+    font-family: "Montserrat", sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 59px;
+    letter-spacing: 0em;
+    color: #333333;
+  }
+  
+  #thead {
+    font-family: "Nunito Sans", sans-serif;
+    background: #720418;
+    color: #f2f2f2;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+  }
+  
+  #table-section-2 {
+    color: #05111a;
+  
+    padding-bottom: 100px;
+    text-align: center;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+  }
+  /* #table-section-2 tbody td {
+    width: 17%;
+  }
+  #table-section-2 tbody td:nth-child(3) {
+    width: 45%;
+  } */
+  #right-section {
+    position: relative;
+    margin-top: 57px;
+  }
+  #right-section img {
+    position: absolute;
+    top: -4px;
+    left: -25px;
+  }
+  #right-section span {
+    color: #241400;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+  }
+  #contact {
+    font-family: "Montserrat", sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 59px;
+    color: #333333;
+  }
+  
