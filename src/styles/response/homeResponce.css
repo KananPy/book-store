@@ -1,0 +1,89 @@
+@media only screen and (max-width: 468px) {
+    #section-1{
+        margin-top: 100px;
+        margin-left: 20px;
+    }
+    /* section-1 */
+    
+    #left-container{
+    width: 92%;
+    }
+    #title{
+        font-size: 28px;
+        margin-left: 15px;
+    }
+    #paragraf-1{
+        text-align: center;
+    }
+    #btn-catalog{
+        width: 90%;
+        margin-left: 15px;
+    }
+    #right-container{
+        width: 80%;
+        top:150px
+    }
+    .images-1{
+        width: 80%;
+        margin-left: 20px;
+    }
+    .images-2{
+        width: 70%;
+        left: 30px;
+        top: -100px;
+    }
+    /* section -2 */
+    
+    #section-2{
+        position: relative;
+        margin-bottom: 20px;
+    }
+    #catalog-title{
+        margin-bottom: 30px;
+        position: absolute;
+        top: -120px;
+    }
+    .catalog {
+        margin-bottom: 40px;
+    }
+    
+    #section-3{
+        margin-top: 80px;
+    }
+    #store-details{
+        margin-left: 26px;
+    }
+    
+    
+    }
+    
+    @media only screen and (max-width: 768px) {
+    #section-1{
+        margin-top: 100px;
+        margin-left: 20px;
+    
+    }
+    #btn-catalog{
+        width: 80%;
+    }
+    #right-container{
+        width: 80%;
+        top:150px
+    }
+    .images-1{
+    width: 80%;
+    object-fit: cover;
+    }
+    .images-2{
+        width: 60%;
+        left: 50px;
+    }
+    #section-3{
+        margin-top: 10px;
+    }
+    #store-details{
+        margin-left: 100px;
+    }
+    }
+    
+    /*footer */
