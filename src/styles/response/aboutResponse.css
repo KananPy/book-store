@@ -1,0 +1,15 @@
+@media screen and (max-width: 992px) {
+
+    #section-about{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    #left-section-about{
+        width: 60%;
+    }
+    #right-section-about{
+        width: 60%;
+    }
+}

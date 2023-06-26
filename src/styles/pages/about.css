@@ -1,0 +1,89 @@
+body {
+    background: #FFFAF5
+}
+
+#section-about{
+    margin-top: 140px;
+    margin-bottom: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 50px;
+}
+#left-section-about{
+    width: 45%;
+    
+}
+
+#right-section-about{
+    width: 40%;
+    padding-top: 50px;
+}
+#right-section-about img{
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+#about-Title{
+    font-family: "Montserrat", sans-serif;
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 71px;
+    letter-spacing: 0em;
+color: #241400;    
+}
+#about-Paragraf{
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 35px;
+    letter-spacing: 0em;
+    color: #241400;    
+
+}
+/* Modal Css  */
+#modalJoin{
+    font-family: "Montserrat", sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0em;
+  color:#000000;
+  
+  }
+  #modalFullName::placeholder && #modalEmail::placeholder{
+    font-family: 'Crimson Text', serif;
+    font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0em;
+  color: #797667;
+  
+  }
+  #modalBtn{
+    background-color: #E16A00 ;
+    font-family: 'Crimson Text', serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23px;
+  letter-spacing: 0em;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
