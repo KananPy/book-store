@@ -1,0 +1,98 @@
+@media only screen and (max-width: 1100){
+    #section-form{
+      left: 22%;
+    }
+  
+  
+  }
+  
+  
+  @media only screen and (max-width: 768px){
+    #section-form{
+      left: 15%;
+    }
+  
+  
+  }
+  
+  
+  
+  @media only screen and (max-width: 480px) {
+  
+    
+    
+    /* Admin Page section -1 */
+      #section-logo {
+         margin-top: 21.79px;
+         margin-right: 16px;
+      }
+  
+      #section-form{
+          width: 300px;
+          height: 303.93px;
+          position: absolute;
+          left: 3%;
+          top: 100px;
+      }
+      #form-Name{
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 24px;
+          letter-spacing: 0em;
+          text-align: center;
+          
+      }
+    
+      input{
+          display: block;
+          width: 100%;
+      }
+  
+  
+      .nav-list{
+          display: block;
+          display: none;
+      }
+  
+      /* Admin Section-2 */
+  #section-top{
+      margin-top: 16px;
+  }
+    #main-section{
+      width: 100%;
+      padding-left: 10px;
+      padding-top: 56px;
+    }
+    .search-informations{
+      width: 308px;
+    }
+  #textArea{
+      overflow-y: hidden;
+  
+  }
+    #textArea::placeholder{
+      color: transparent;
+    }
+    .table-section-1{
+      width: 100%;
+    }
+    #table-section-2{
+      overflow-x: scroll;
+    }
+    /* #table-section-2 tbody td {
+      width: 50%;
+    }
+    #table-section-2 tbody td:nth-child(3) {
+      width: 50%;
+    }
+    */
+    #bgColor{
+      background-color: #720418;
+      border-bottom: 0;
+    }
+    }
+  
+    
+  
+  
+  
