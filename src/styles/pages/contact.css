@@ -1,0 +1,136 @@
+
+body{
+  background: #FFFAF5
+}
+#section-contact{
+  margin-top: 140px;
+  margin-left: 220px;
+  margin-bottom: 60px;
+}
+input{
+  width: 420px;
+  height: 72px;
+  margin-right: 24px;
+  margin-bottom: 20px;
+  font-size: 24px;
+
+}
+
+input::placeholder{
+  font-family: 'Crimson Text', serif;
+  font-size: 23px;
+font-weight: 400;
+line-height: 30px;
+letter-spacing: 0em;
+padding-left: 20px;
+color: #797667;
+}
+
+#contact{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 80px;
+}
+#contact input:not(:last-child) {
+  width: 35%;
+  font-size: 24px;
+  font-family: 'Crimson Text', serif;
+
+}
+ #textArea{
+width: 67.6%;
+margin-left: 80px;
+
+}
+#textArea textarea{
+  font-size: 24px;
+  font-family: 'Crimson Text', serif;
+
+}
+#textArea textarea::placeholder{
+  font-family: 'Crimson Text', serif;
+  font-size: 23px;
+font-weight: 400;
+line-height: 30px;
+letter-spacing: 0em;
+padding-left: 20px;
+color: #797667;
+
+  }
+#search-title-text{
+  margin-bottom: 20px;
+  margin-left: 90px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 71px;
+  letter-spacing: 0em;
+color: #333333;  
+
+}
+
+#contact-btn{
+  margin-top: 48px;
+display: block;
+width: 40%;
+padding: 18px;
+margin-left: 21%;
+color: #ffffff;
+background: #E16A00;
+font-family: 'Crimson Text', serif;
+font-size: 30px;
+font-weight: 400;
+line-height: 39px;
+letter-spacing: 0em;
+cursor: pointer;
+
+border-radius: 8px;
+border: none;
+}
+#cotact-btn:hover{
+  opacity: 0.8;
+
+}
+
+#contact-textarea-details{
+  font-family: 'Crimson Text', serif;
+  font-weight: 400;
+  color: red;
+
+  font-size: 18px;
+  margin-top: 15px;
+margin-left: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+/* Modal Css  */
+#modalJoin{
+  font-family: "Montserrat", sans-serif;
+font-size: 25px;
+font-weight: 700;
+line-height: 30px;
+letter-spacing: 0em;
+color:#000000;
+
+}
+#modalFullName::placeholder && #modalEmail::placeholder{
+  font-family: 'Crimson Text', serif;
+  font-size: 16px;
+font-weight: 400;
+line-height: 21px;
+letter-spacing: 0em;
+color: #797667;
+
+}
+#modalBtn{
+  background-color: #E16A00 ;
+  font-family: 'Crimson Text', serif;
+font-size: 18px;
+font-weight: 700;
+line-height: 23px;
+letter-spacing: 0em;
+color: #FFFFFF;
+border: none;
+border-radius: 0.3rem;
+cursor: pointer;
+}
