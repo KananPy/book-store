@@ -203,7 +203,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <!-- <tr>
                 <th scope="row">1</th>
                 <td>Audrey Mckinney</td>
                 <td>lisa.watson@example.com</td>
@@ -222,7 +222,7 @@
                 <th scope="row">4</th>
                 <td>Victoria Lane</td>
                 <td>deanna.curtis@example.com</td>
-              </tr>
+              </tr> -->
             </tbody>
           </table>
         </div>
@@ -305,20 +305,7 @@
       onAuthStateChanged,
       signOut
     } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-
-    // Your web app's Firebase configuration
-    // const firebaseConfig = {
-    //   apiKey: "AIzaSyD84O_Gy5jdZfcYfergx2kPBu5-APNQ3ug",
-    //   authDomain: "library-project-ad153.firebaseapp.com",
-    //   databaseURL: "https://library-project-ad153-default-rtdb.europe-west1.firebasedatabase.app",
-    //   projectId: "library-project-ad153",
-    //   storageBucket: "library-project-ad153.appspot.com",
-    //   messagingSenderId: "209210870711",
-    //   appId: "1:209210870711:web:3446eaacf65c7f1e6a7632"
-    // };
-
+    
     // Initialize Firebase
     const app = initializeApp(firebaseConfig);
     const auth = getAuth(app)
@@ -404,17 +391,7 @@
 
           }, 1500);
         }
-        // else {
-        //   section1.style.display = "block"
-        //   section2.style.display = "none"
-        //   section2.style.display = " flex"
-
-        //   if(bodyPx <= 480){
-        //     section1.style.display = "block"
-        //     section2.style.display = "none"
-        //     rightSection.style.display = "none"
-        //   }
-        // }
+       
       })
     }
 
@@ -471,6 +448,9 @@
 
     }
   </script>
+  <!-- Script Join Us-->
+
+
 </body>
 
 </html>
