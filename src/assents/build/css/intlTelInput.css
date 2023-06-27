@@ -113,7 +113,7 @@
 .iti--separate-dial-code input[type=text],
 .iti--separate-dial-code input[type=tel] {
   padding-right: 6px;
-  padding-left: 60px;
+  padding-left: 70px;
   margin-left: 0;
 }
 [dir=rtl] .iti--allow-dropdown input,
