@@ -257,18 +257,18 @@
           const database = getDatabase(app);
             const userRef = ref(database, "join/"); // push ile bele edirik
   
-          const fullName = document.querySelector("#modalFullName").value;
-          const email = document.querySelector("#modalEmail").value;
-         if(!fullName || !email){
+          const ModalfullName = document.querySelector("#modalFullName").value;
+          const Modalemail = document.querySelector("#modalEmail").value;
+         if(!ModalfullName || !Modalemail){
 
             showAlert("danger","Please Fill in the Field")         
                return
          }
           const person = {
-            fullName,
-            email
+            ModalfullName,
+            Modalemail
           }
-          showAlert("success","Please Fill in the Field")         
+          showAlert("success","Our team will contact you shortly")         
 
            push(userRef, person);
            document.querySelector("#modalFullName").value = ""
