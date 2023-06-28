@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="../styles/general/global.css" />
     <link rel="stylesheet" href="../styles/pages/catalog.css" />
     <link rel="stylesheet" href="../styles/response/catalogrespons.css" />
+    <link rel="stylesheet" href="../styles/pages/bookpage.css" />
+    <link rel="stylesheet" href="../styles/response/bookpageresponse.css" />
     <link rel="stylesheet" href="../styles/pages/slickcat.css" />
     <link rel="stylesheet" href="../styles/pages/slicktheme.css" />
   </head>
@@ -35,20 +37,20 @@
         <nav id="nav-header">
           <ul class="nav-list d-flex">
             <li class="nav-item">
-              <a
-                href="/book-store/index.html"
-                id="nav-link"
-                class="nav-link nav-active"
+              <a href="/book-store/index.html" id="nav-link" class="nav-link"
                 >Home</a
               >
             </li>
             <li class="nav-item">
-              <a href="../pages/catalog.html" id="nav-link" class="nav-link"
+              <a
+                href="../pages/catalog.html"
+                id="active-item"
+                class="nav-link"
                 >Catalog</a
               >
             </li>
             <li class="nav-item">
-              <a href="../pages/about.html" class="nav-link" id="active-item"
+              <a href="../pages/about.html" class="nav-link" id="nav-link"
                 >About Store</a
               >
             </li>
@@ -83,21 +85,13 @@
     </header>
 
     <main>
-      <aside>
+      <div id="catalogpagesection">
+        <aside>
         <div class="all_books">All Book</div>
         <div class="container_div">
           <div class="all_div">All</div>
           <div class="scroll_div">
-            <!-- <ul>
-              <li>Fantastic</li>
-              <li>Besteller</li>
-              <li>Roman</li>
-              <li>Baby</li>
-              <li>Dedective</li>
-              <li>reality</li>
-              <li>Classic</li>
-              <li>Relationship</li>
-            </ul> -->
+           
             <div>Fantastic</div>
             <div>Besteller</div>
             <div>Roman</div>
@@ -120,7 +114,7 @@
               <img src="../assents/images/CatalogPage/secondbook.svg" alt="" />
               <h3>Order in Chaos</h3>
               <span>Konstantin Koptelov</span>
-              <button>Read More</button>
+              <button id="readmojs">Read More</button>
             </div>
           </div>
           <div class="book_card">
@@ -131,7 +125,7 @@
               <img src="../assents/images/CatalogPage/secondbook.svg" alt="" />
               <h3>Order in Chaos</h3>
               <span>Konstantin Koptelov</span>
-              <button>Read More</button>
+              <button id="readmojs">Read More</button>
             </div>
           </div>
           <div class="book_card">
@@ -142,7 +136,7 @@
               <img src="../assents/images/CatalogPage/secondbook.svg" alt="" />
               <h3>Order in Chaos</h3>
               <span>Konstantin Koptelov</span>
-              <button>Read More</button>
+              <button id="readmojs">Read More</button>
             </div>
           </div>
           <div class="book_card">
@@ -153,7 +147,7 @@
               <img src="../assents/images/CatalogPage/secondbook.svg" alt="" />
               <h3>Order in Chaos</h3>
               <span>Konstantin Koptelov</span>
-              <button>Read More</button>
+              <button id="readmojs">Read More</button>
             </div>
           </div>
           <div class="book_card">
@@ -164,7 +158,7 @@
               <img src="../assents/images/CatalogPage/secondbook.svg" alt="" />
               <h3>Order in Chaos</h3>
               <span>Konstantin Koptelov</span>
-              <button>Read More</button>
+              <button id="readmojs">Read More</button>
             </div>
           </div>
           <div class="book_card">
@@ -175,7 +169,7 @@
               <img src="../assents/images/CatalogPage/secondbook.svg" alt="" />
               <h3>Order in Chaos</h3>
               <span>Konstantin Koptelov</span>
-              <button>Read More</button>
+              <button id="readmojs">Read More</button>
             </div>
           </div>
           <div class="book_card">
@@ -186,7 +180,7 @@
               <img src="../assents/images/CatalogPage/secondbook.svg" alt="" />
               <h3>Order in Chaos</h3>
               <span>Konstantin Koptelov</span>
-              <button>Read More</button>
+              <button id="readmojs">Read More</button>
             </div>
           </div>
           <div class="book_card">
@@ -197,7 +191,7 @@
               <img src="../assents/images/CatalogPage/secondbook.svg" alt="" />
               <h3>Order in Chaos</h3>
               <span>Konstantin Koptelov</span>
-              <button>Read More</button>
+              <button id="readmojs">Read More</button>
             </div>
           </div>
         </div>
@@ -221,7 +215,7 @@
               <img src="../assents/images/CatalogPage/secondbook.svg" alt="" />
               <h3>Order in Chaos</h3>
               <span>Konstantin Koptelov</span>
-              <button>Read More</button>
+              <button id="readmojs">Read More</button>
             </div>
           </div>
           <div class="book_card">
@@ -232,7 +226,7 @@
               <img src="../assents/images/CatalogPage/secondbook.svg" alt="" />
               <h3>Order in Chaos</h3>
               <span>Konstantin Koptelov</span>
-              <button>Read More</button>
+              <button id="readmojs">Read More</button>
             </div>
           </div>
           <div class="book_card">
@@ -243,7 +237,7 @@
               <img src="../assents/images/CatalogPage/secondbook.svg" alt="" />
               <h3>Order in Chaos</h3>
               <span>Konstantin Koptelov</span>
-              <button>Read More</button>
+              <button id="readmojs">Read More</button>
             </div>
           </div>
           <div class="book_card">
@@ -254,7 +248,7 @@
               <img src="../assents/images/CatalogPage/secondbook.svg" alt="" />
               <h3>Order in Chaos</h3>
               <span>Konstantin Koptelov</span>
-              <button>Read More</button>
+              <button id="readmojs">Read More</button>
             </div>
           </div>
           <div class="book_card">
@@ -265,7 +259,7 @@
               <img src="../assents/images/CatalogPage/secondbook.svg" alt="" />
               <h3>Order in Chaos</h3>
               <span>Konstantin Koptelov</span>
-              <button>Read More</button>
+              <button id="readmojs">Read More</button>
             </div>
           </div>
           <div class="book_card">
@@ -276,7 +270,7 @@
               <img src="../assents/images/CatalogPage/secondbook.svg" alt="" />
               <h3>Order in Chaos</h3>
               <span>Konstantin Koptelov</span>
-              <button>Read More</button>
+              <button id="readmojs">Read More</button>
             </div>
           </div>
           <div class="book_card">
@@ -287,7 +281,7 @@
               <img src="../assents/images/CatalogPage/secondbook.svg" alt="" />
               <h3>Order in Chaos</h3>
               <span>Konstantin Koptelov</span>
-              <button>Read More</button>
+              <button id="readmojs">Read More</button>
             </div>
           </div>
           <div class="book_card">
@@ -298,7 +292,7 @@
               <img src="../assents/images/CatalogPage/secondbook.svg" alt="" />
               <h3>Order in Chaos</h3>
               <span>Konstantin Koptelov</span>
-              <button>Read More</button>
+              <button id="readmojs">Read More</button>
             </div>
           </div>
         </div>
@@ -321,7 +315,7 @@
               <img src="../assents/images/CatalogPage/secondbook.svg" alt="" />
               <h3>Order in Chaos</h3>
               <span>Konstantin Koptelov</span>
-              <button>Read More</button>
+              <button id="readmojs">Read More</button>
             </div>
           </div>
           <div class="book_card">
@@ -332,7 +326,7 @@
               <img src="../assents/images/CatalogPage/secondbook.svg" alt="" />
               <h3>Order in Chaos</h3>
               <span>Konstantin Koptelov</span>
-              <button>Read More</button>
+              <button id="readmojs">Read More</button>
             </div>
           </div>
           <div class="book_card">
@@ -343,7 +337,7 @@
               <img src="../assents/images/CatalogPage/secondbook.svg" alt="" />
               <h3>Order in Chaos</h3>
               <span>Konstantin Koptelov</span>
-              <button>Read More</button>
+              <button id="readmojs">Read More</button>
             </div>
           </div>
           <div class="book_card">
@@ -354,7 +348,7 @@
               <img src="../assents/images/CatalogPage/secondbook.svg" alt="" />
               <h3>Order in Chaos</h3>
               <span>Konstantin Koptelov</span>
-              <button>Read More</button>
+              <button id="readmojs">Read More</button>
             </div>
           </div>
           <div class="book_card">
@@ -365,7 +359,7 @@
               <img src="../assents/images/CatalogPage/secondbook.svg" alt="" />
               <h3>Order in Chaos</h3>
               <span>Konstantin Koptelov</span>
-              <button>Read More</button>
+              <button id="readmojs">Read More</button>
             </div>
           </div>
           <div class="book_card">
@@ -376,7 +370,7 @@
               <img src="../assents/images/CatalogPage/secondbook.svg" alt="" />
               <h3>Order in Chaos</h3>
               <span>Konstantin Koptelov</span>
-              <button>Read More</button>
+              <button id="readmojs">Read More</button>
             </div>
           </div>
           <div class="book_card">
@@ -387,7 +381,7 @@
               <img src="../assents/images/CatalogPage/secondbook.svg" alt="" />
               <h3>Order in Chaos</h3>
               <span>Konstantin Koptelov</span>
-              <button>Read More</button>
+              <button id="readmojs">Read More</button>
             </div>
           </div>
           <div class="book_card">
@@ -398,7 +392,7 @@
               <img src="../assents/images/CatalogPage/secondbook.svg" alt="" />
               <h3>Order in Chaos</h3>
               <span>Konstantin Koptelov</span>
-              <button>Read More</button>
+              <button id="readmojs">Read More</button>
             </div>
           </div>
         </div>
@@ -412,49 +406,152 @@
           <img src="../assents/icons/instagram.svg" alt="" />
         </div>
       </section>
-      <!-- Modal -->
-      <div
-        class="modal fade pb-3"
-        id="exampleModal"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header border-bottom-0">
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
+      
+     
+       
+      </div>
+      </div>
+      <div id="bookpagesection">
+        <aside>
+          <div class="container">
+            <div class="row">
+              <div class="col-6">
+                <button class="backbtn"><p>> Back</p></button> <br />
+                <button class="bluebtn"><p>2017</p></button>
+                <h3 class="h3_style">Order in Chaos</h3>
+                <h1 class="response_h1">2 days ago added</h1>
+                <p class="text_p">Konstantin Koptelov</p>
+                <span class="response_span">
+                  s of Kiev can receive an order on the day of its registration.
+                  Customers from other cities of Ukraine can receive an order
+                  within 1-5 days, depending on the location of the settlement and
+                  the selected delivery method. Orders over UAH 1000 are delivered
+                  free of charge *. You can see the available methods, exact terms
+                  and cost of delivery during checkout in the order basket, after
+                  selecting the delivery city. More details
+                </span>
+              </div>
+              <div class="col-6">
+                <img
+                  class="image_firstbook"
+                  src="../assents/images/CatalogPage/firstbook.svg"
+                  alt="book"
+                />
+              </div>
             </div>
-            <div
-              class="modal-body d-flex flex-column justify-content-between align-items-center pb-5"
-              id="modalBody"
-            >
-              <h2 class="mb-3" id="modalJoin">Join Us</h2>
-              <input
-                type="text"
-                class="form-control mb-3 w-75"
-                id="modalFullName"
-                aria-describedby="emailHelp"
-                placeholder="Full Name"
-              />
-              <input
-                type="email"
-                class="form-control mb-3 w-75"
-                id="modalEmail"
-                aria-describedby="emailHelp"
-                placeholder="Email"
-              />
+          </div>
+        </aside>
+  
+        <section>
+          <div class="container">
+            <div class="row">
+              <div class="col-6 form_col">
+                <form action="/action_page.php">
+                  <input
+                    type="text"
+                    id="fname"
+                    name="fname"
+                    placeholder="your anonim comment..."
+                  />
+                  <button id="leader_teem">
+                    <img
+                      src="../assents/images/CatalogPage/send.svg"
+                      alt="send"
+                    />
+                  </button>
+                </form>
+              </div>
+              <div class="col-6"></div>
+            </div>
+            <div class="row row_anonim">
+              <div class="col-6 text_anonim">
+                <div class="row">
+                  <div class="col-1"><p>anonim</p></div>
+                  <div class="col-11 ps-5"><p>18.32 today</p></div>
+                </div>
+                <div class="text_area">
+                  <p>
+                    Woah, your project looks awesome! How long have you been
+                    coding for? I’m still new, but think I want to dive into React
+                    as well soon. Perhaps you can give me an insight on where I
+                    can learn React? Thanks!
+                  </p>
+                </div>
+              </div>
+              <div class="col-6"></div>
+              <div class="col-6 text_anonim_two">
+                <div class="row">
+                  <div class="col-1"><p>anonim</p></div>
+                  <div class="col-11 ps-5"><p>18.32 today</p></div>
+                </div>
+                <div class="text_area_two">
+                  <p>
+                    Woah, your project looks awesome! How long have you been
+                    coding for? I’m still new, but think I want to dive into React
+                    as well soon. Perhaps you can give me an insight on where I
+                    can learn React? Thanks!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section id="section-5">
+          <div class="social-media-text h2">Follow us on social media</div>
+          <div class="social-media-icons">
+            <img src="../assents/icons/facebook.svg" alt="" class="images-icon" />
+            <img src="../assents/icons/twiter.svg" alt="" class="images-icon" />
+            <img src="../assents/icons/instagram.svg" alt="" />
+          </div>
+        </section>
+  
+       
+      </div>
+      
 
-              <button class="w-75 mb-3 p-2" id="modalBtn">Join</button>
-            </div>
+      <div
+      class="modal fade pb-3"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header border-bottom-0">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div
+            class="modal-body d-flex flex-column justify-content-between align-items-center pb-5"
+            id="modalBody"
+          >
+            <h2 class="mb-3" id="modalJoin">Join Us</h2>
+            <input
+              type="text"
+              class="form-control mb-3 w-75"
+              id="modalFullName"
+              aria-describedby="emailHelp"
+              placeholder="Full Name"
+            />
+            <input
+              type="email"
+              class="form-control mb-3 w-75"
+              id="modalEmail"
+              aria-describedby="emailHelp"
+              placeholder="Email"
+            />
+
+            <button class="w-75 mb-3 p-2" id="modalBtn">Join</button>
           </div>
         </div>
       </div>
+    </div>
     </main>
 
     <footer id="footer-logo" class="pt-3">
@@ -625,5 +722,6 @@
           }
         });
     </script>
+
   </body>
 </html>

@@ -1,0 +1,184 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+body{
+    background: #E5E5E5;
+}
+
+
+main{
+    margin-top: 11%;
+    margin-left: 5%;
+}
+.backbtn{
+    width: 100px;
+    height: 29px;
+    border-color: rgba(225, 106, 0, 1);
+    border-radius: 3px;
+    box-shadow: rgba(225, 106, 0, 0.19);
+    background: rgba(225, 106, 0, 1);
+    color: rgba(255, 255, 255, 1);
+    margin-bottom: 63px;
+    
+}
+
+.bluebtn{
+    width: 69px;
+    height: 23px;
+    border-radius: 3px;
+    border-color: transparent;
+    background: rgba(47, 128, 237, 1);
+    color:  rgba(255, 255, 255, 1); 
+    margin-bottom: 10px;
+}
+
+.backbtn p{
+    font-size: 16px;
+    font-weight: 900;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: -6px;
+}  
+.bluebtn p{
+    font-size: 13px;
+    font-weight: 900;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: -8px;
+} 
+
+aside{
+    margin-bottom: 123px;
+}
+aside p{
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 35.31px;
+} 
+
+.text_p{
+    font-size: 22px;
+    font-weight: 400;
+    color: rgba(36, 20, 0, 1);
+    font-family: 'Montserrat', sans-serif;
+    line-height: 43.16px;
+}
+aside span{
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 35.31px;
+}
+
+.book_img {
+    width: 379px;
+    height: 529px;
+    margin-left: 63px;
+}
+section form{
+    margin-bottom: 100px;
+}
+section form input{
+    width: 89%;
+    padding:  16px 35px;
+    border:  1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.15);
+}
+
+section form button{
+    width: 60px;
+    height: 52px;
+    background: rgba(225, 106, 0, 1);
+    border-radius: 10px;
+    border-color: transparent;
+}
+
+section form button img{
+    width: 25px;
+    height: 21px;
+    
+}
+.row_anonim{
+    margin-left: 2px;
+}
+.text_anonim{
+    width: 52%;
+    font-size: 16px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    background: white;
+    padding-left: 18px;
+    padding-top: 30px;
+    margin-top: -113px;
+    margin-bottom: 43px;
+    box-shadow: rgba(0, 0, 0, 0.1);
+}
+
+.text_anonim_two{
+    width: 52%;
+    font-size: 16px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    background: white;
+    padding-left: 18px;
+    padding-top: 30px;
+    margin-bottom: 148px;
+    box-shadow: rgba(0, 0, 0, 0.1);
+}
+
+.text_area{  
+    text-align: left;
+    padding-bottom: 15px;
+}
+.text_area p{
+    width: 100%;
+    font-size: 16px;
+    font-family: 'Rubik', sans-serif;  
+    font-weight: 400;
+    line-height: 24px;
+}
+.text_area_two{
+    font-size: 16px;
+    font-family: 'Rubik', sans-serif;  
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: left;
+    padding-bottom: 15px;
+}
+
+.form_col{
+    
+    margin-bottom: 53px;
+}
+
+
+.h3_style{
+    font-size: 35px;
+    line-height: 69px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+}
+.response_h1{
+    font-size: 16px;
+    line-height: 32px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.response_span{
+    
+    font-size: 18px;
+    line-height: 36px;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+}
+.image_firstbook{
+    width: 379px;
+    height: 529px;
+}
+
+
+
+
+
