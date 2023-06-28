@@ -98,12 +98,15 @@
             class="form-control"
             id="fullName"
             placeholder="Full Name"
+            maxlength="10"
           />
           <input
             type="email"
             class="form-control"
             id="email"
             placeholder="Email"
+            maxlength="30"
+
           />
           <input
             type="text"
@@ -116,7 +119,7 @@
             class="form-control"
             placeholder="Phone"
             id="telephone"
-          />
+            max="16"/>
         </div>
         <div class="mb-3" id="textArea">
           <textarea
@@ -314,10 +317,10 @@
       window.intlTelInput(myInput, {});
       $(document).ready(function () {
         $("#limit").on("keyup", function () {
-          $("#limit_count").html("" + $(this).val().length + " / 50");
-          if ($(this).val().length > 50) {
-            $(this).val($(this).val().substring(0, 50));
-            $("#limit_count").html("50 / 50");
+          $("#limit_count").html("" + $(this).val().length + " / 100");
+          if ($(this).val().length > 100) {
+            $(this).val($(this).val().substring(0, 100));
+            $("#limit_count").html("100 / 100");
           }
         });
       });

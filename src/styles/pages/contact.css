@@ -143,5 +143,7 @@ cursor: pointer;
   color: red;
 } */
 
-#toast-container > .toast-warning { background-color: #BD362F; }
+#toast-container > .toast-warning { 
+  background-color: #BD362F; 
+}
 #toast-container > .toast-success { background-color: rgb(82, 172, 82); }
