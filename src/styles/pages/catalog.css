@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Rubik&display=swap");
+body {
+  background: #fffaf5;
+}
+.container_book {
+  width: 80%;
+  margin: 0 auto;
+  /* background-color: grey; */
+}
+.book_card {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 62px;
+  width: 184px;
+  background-color: #fff;
+  margin: 67px 0;
+  margin-bottom: 15px;
+  padding-left: 11px;
+  box-shadow: rgba(0, 0, 0, 0.25);
+}
+
+.new_icon {
+  width: 47px;
+  height: 15px;
+  position: absolute;
+  top: -5px;
+  right: 73px;
+}
+.book_main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 184px;
+}
+
+.book_main h3 {
+  margin-top: 32px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: rgba(36, 20, 0, 1);
+  line-height: 27px;
+  letter-spacing: 0em;
+}
+
+.book_main span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgba(36, 20, 0, 1);
+  letter-spacing: 0em;
+  text-align: left;
+  margin-top: 15px;
+}
+
+.book_main button {
+  font-family: "Montserrat", sans-serif;
+  width: 136px;
+  height: 29px;
+  border-radius: 3px;
+  margin-top: 1px;
+  font-size: 12px;
+  font-weight: 900;
+  background: rgba(225, 106, 0, 1);
+  color: #fff;
+  border: transparent;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+}
+
+.besteller {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  font-size: 25px;
+  line-height: 50px;
+  margin-left: 45%;
+}
+
+.releases {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  font-size: 25px;
+  line-height: 50px;
+  margin-left: 45%;
+}
+
+.container_div {
+  margin-left: 469px;
+  display: flex;
+  flex-direction: row;
+}
+.all_books {
+  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
+  display: inline-block;
+  font-weight: 900;
+  line-height: 49px;
+  letter-spacing: 0em;
+  text-align: left;
+  position: relative;
+  top: 37px;
+  margin-left: 181px;
+  padding-top: 15px;
+}
+.scroll_div {
+  overflow-x: auto;
+  height: 3px;
+  margin-top: 80px;
+  padding-left: 84px;
+  margin-left: -6px;
+  width: 45%;
+  display: flex;
+  flex-direction: row;
+}
+.scroll_div div {
+  padding-left: 53px !important;
+}
+
+#section_third {
+  margin-bottom: 239px;
+}
+
+#modalJoin {
+  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0em;
+  color: #000000;
+}
+#modalFullName::placeholder && #modalEmail::placeholder {
+  font-family: "Crimson Text", serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0em;
+  color: #797667;
+}
+#modalBtn {
+  background-color: #e16a00;
+  font-family: "Crimson Text", serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23px;
+  letter-spacing: 0em;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
