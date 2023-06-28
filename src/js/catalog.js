@@ -26,7 +26,7 @@ $(document).ready(function () {
   let readbutton = document.querySelector("#readmojs");
 
   
-  readbutton.addEventListener("click" , function(){
+  readbutton.addEventListener("click",function(){
     catalogsection.style.display= "none";
     booksection.style.display= "block";
     

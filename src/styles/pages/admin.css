@@ -320,12 +320,47 @@ body {
     line-height: 16px;
     letter-spacing: 0.01em;
   }
-  /* #table-section-2 tbody td {
-    width: 17%;
+   /* #table-section-2 tbody td:nth-child(1) {
+    width: 2%;
+  }
+  #table-section-2 tbody td:nth-child(2) {
+    width: 15%;
   }
   #table-section-2 tbody td:nth-child(3) {
-    width: 45%;
-  } */
+    width: 10%;
+  }
+  #table-section-2 tbody td:nth-child(4) {
+    width: 10%;
+  }
+  #table-section-2 tbody td:nth-child(5) {
+    width: 40%;
+  }  */
+  /* #table-section-2 tbody td:nth-child(6) {
+    width: 40%;
+  }  */
+  #phoneNumber{
+    width:  14%;
+  }
+  #adress{
+    width: 16%;
+  }
+  #theadFullName{
+width: 12%;
+  }
+  #theadPhone{
+    width: 19.75%;
+  }
+  #tr{
+    position: relative;
+  }
+  #text{
+     width: 18%; 
+  }
+  #delete{
+    position: absolute;
+    /* top: 20px; */
+    right: 1px;
+  }
   #right-section {
     position: relative;
     margin-top: 57px;
@@ -350,4 +385,12 @@ body {
     line-height: 59px;
     color: #333333;
   }
-  
+  .search-informations{
+overflow-y: auto;
+  }
+
+  #addBtn{
+    background-color: #0d6efd;
+    color: #ffffff;
+    width: 10%;
+  }
