@@ -20,3 +20,14 @@ $(document).ready(function () {
       ],
     });
   });
+
+  let  booksection = document.querySelector("#bookpagesection");
+  let catalogsection = document.querySelector("#catalogpagesection");
+  let readbutton = document.querySelector("#readmojs");
+
+  
+  readbutton.addEventListener("click" , function(){
+    catalogsection.style.display= "none";
+    booksection.style.display= "block";
+    
+  });

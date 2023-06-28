@@ -1,0 +1,51 @@
+@media only screen and (max-width: 480px){
+    .bluebtn{
+        margin-left: -10px;
+        margin-top: 451px;
+    }
+
+    
+    .col-6 img{
+        width: 281px;
+        height: 479px;
+        margin-top: 97px;
+        margin-left: -243px;
+    }
+
+    .backbtn{
+        margin-left: -11px;
+        margin-top: 50px;
+    }
+
+    .h3_style{
+        display: none;
+    }
+    .response_h1{
+        display: none;
+    }
+    .text_p{
+        display: none;
+    }
+    .response_span{
+        display: none;
+        
+    }
+
+    h3{
+        display: none;
+    }
+
+    .form_col{
+        display: none;
+    }
+
+    .text_anonim{
+        display: none;
+    }
+
+    .text_anonim_two{
+        display: none;
+    }
+
+    
+}
