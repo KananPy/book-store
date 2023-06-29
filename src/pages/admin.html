@@ -26,6 +26,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!--Toastr Plugin Css-->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css"
@@ -33,6 +34,9 @@
     <link rel="stylesheet" href="../styles/general/global.css" />
     <link rel="stylesheet" href="../styles/pages/admin.css" />
     <link rel="stylesheet" href="../styles/response/adminResponse.css" />
+    <!--Circle Progress Plugin Css-->
+    <link rel="stylesheet" href="../styles/general/jquery.shCircleLoader.css">
+
   </head>
 
   <body>
@@ -178,15 +182,15 @@
               /></span>
             </div>
             <div class="search-informations">
-              <div id="progress"></div>
-              <div class="search-information">
+              <div class="example"></div>
+              <!-- <div class="search-information">
                 <img src="../assents/icons/oclock1.svg" alt="" />
                 <span>Dan Brown Davinc</span>
               </div>
               <div class="search-information">
                 <img src="../assents/icons/oclock2.svg" alt="" />
                 <span>Dan Brown Davinc</span>
-              </div>
+              </div> -->
             </div>
           </div>
 
@@ -242,28 +246,42 @@
                   value=""
                   id="flexCheckDefault"
                 />
-                <label class="form-check-label mt-1" for="flexCheckDefault">
+                <label
+                  class="form-check-label mt-1 mb-3"
+                  for="flexCheckDefault"
+                >
                   New
                 </label>
               </div>
-
-              <div>
-                <label for="Book Type" class="form-label mt-3 me-2"
-                  >Book Type</label
-                >
-                <button type="button" class="btn btn-success" id="addBtn">
-                  Add
-                </button>
+              <div id="typeofBook">
+                <div id="left">
+                  <span class="me-2">Book type</span>
+                  <button type="button" class="btn btn-primary" id="addBook">Add</button>              
+                  </div>
+                <div id="right">
+                  <input
+                  type="text"
+                  class="form-control me-2"
+                  placeholder="Add Book"
+                  aria-label="BookImageUrl"
+                  aria-describedby="addon-wrapping"
+                  id="BooktypeText"
+                />  
+                <div class="d-flex mb-4">
+                    <button type="button" class="btn btn-success me-2" id="save">Add</button>                      
+                    
+                    </button>
+                    <button type="button" class="btn btn-danger " id="cancel">Cancel</button>
+                  </div>
+                </div>
               </div>
+
               <br />
-              <select class="form-select" aria-label="Default select example">
+              <select class="form-select" aria-label="Default select example" id="selectForm">
                 <option selected>Fantastic</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
               </select>
               <br />
-              <button type="submit" class="btn mt-2 w-100 p-3" id="submit">
+              <button type="button" class="btn mt-2 w-100 p-3" id="submit">
                 Add
               </button>
             </form>
@@ -319,7 +337,6 @@
                   <th scope="col">Full Name</th>
                   <th scope="col">Email Address</th>
                   <th scope="col">Clear</th>
-
                 </tr>
               </thead>
               <tbody id="JoinTbody">
@@ -369,7 +386,6 @@
                     ></i>
                   </td>
                 </tr> -->
-             
               </tbody>
             </table>
           </div>
@@ -406,7 +422,9 @@
     <!--Plugin -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-    
+    <script src="../js/CircleProgressPlugins/jquery.shCircleLoader-min.js"></script>
+    <script src="../js/CircleProgressPlugins/jquery.shCircleLoader.js"></script>
+
     <script src="../js/firebaseJs/db.js"></script>
     <script src="../js/admin.js"></script>
 
@@ -424,6 +442,8 @@
         ref,
         onValue,
         remove,
+        push,
+        get
        
       } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
       // Initialize Firebase
@@ -569,13 +589,12 @@
         });
       }
 
-// Reomove
+// Remove
 function removePerson(id){
     
     const userRef = ref(database, "contact/"+id); // remove 
     const joinRef  =  ref(database, "join/"+id); // remove 
     remove(userRef)
-    remove(joinRef)
    }
    $(document).ready(function(){
   $(document).on("click",".delete",function(){
@@ -625,6 +644,49 @@ $(document).ready(function(){
 
 
 }
+//  Push  bookBranch
+document.querySelector("#submit").addEventListener("click",function(){
+  const database = getDatabase(app);
+ const userRef = ref(database, "bookData/"); 
+const bookName = document.querySelector("#Angels").value.trim()
+const authorName = document.querySelector("#authorName").value.trim()
+const BookImageUrl = document.querySelector("#BookImageUrl").value.trim()
+const selectOption = document.querySelector(".optionName").value.trim()
+const checkList = document.querySelector("#flexCheckDefault").checked
+
+if (!bookName || !authorName ||!BookImageUrl || !selectOption  ) {
+            toastr.warning('Please Fill in the Field!');
+           return
+          }
+
+          const BookdataInformation = {
+            bookName,
+            authorName,
+            BookImageUrl,
+            selectOption,
+            checkList
+          };
+          toastr.success('Data has been successfully added to the database!');
+          push(userRef, BookdataInformation);
+
+
+
+
+})
+// get
+get(ref(database,"bookData")).then((snapshot)=>{
+  if(snapshot.exists()){
+    const data = convertDataObj(snapshot.val());
+
+    console.log("data",data)
+
+document.querySelector("#selectForm").innerHTML = data.map(option =>{
+  return `
+  <option >${option.selectOption}</option>
+
+  ` })
+  }
+})
 
     </script>
     <script src="../js/convertDataObj.js"></script>

@@ -1,28 +1,4 @@
-// Search Book  Task 1
-//  AIzaSyBVPbis3ztuFP7Sf2A35kq6NBXJt0xoAmY
-//  https://www.googleapis.com/books/v1/volumes?q=search+terms
-//const searchInput = document.querySelector("#bookName")
-// const searchBtn = document.querySelector("#span-img")
-// const searchInformations = document.querySelector(".search-informations")
-// searchBtn.addEventListener("click",function(){
-//     const searchInput = document.querySelector("#bookName").value.trim()
 
-
-//   let books = fetch(` https://www.googleapis.com/books/v1/volumes?q=${searchInput}`)
-
-// books.then((response)=>{
-//     return response.json()
-// }).then((data)=>{
-//     console.log(data)
-// }).catch((err)=>{
-//     console.log(err)
-// })
-
-
-
-
-
-// })
 
 const searchInput = document.querySelector('#bookName');
 searchInput.addEventListener('input', debounce(searchBooks, 500));
@@ -37,7 +13,12 @@ function debounce(func, wait) {
 
   function searchBooks() {
     const searchQuery = searchInput.value;
-   
+    $('.example').shCircleLoader({
+      color:"#720418",
+      width:"10px",
+      height:"10px"
+      
+    });
     fetch(`https://www.googleapis.com/books/v1/volumes?q=${searchQuery}`)
       .then(response => response.json())
       .then(data => {
@@ -77,4 +58,30 @@ function debounce(func, wait) {
 
   //  // console.log(e.target.textContent)
    
+})
+// BookType
+
+let selectForm = document.querySelector("#selectForm")
+document.querySelector("#addBook").addEventListener("click",function(){
+
+  document.querySelector("#right").style.display="block"
+})
+
+document.querySelector("#cancel").addEventListener("click",function(){
+  document.querySelector("#right").style.display="none"
+
+})
+
+document.querySelector("#save").addEventListener("click",function(){
+  let option = document.createElement("option")
+  option.classList.add("optionName")
+let bookType = document.querySelector("#BooktypeText").value.trim()
+//console.log(!bookType)
+if(!bookType){
+  alert("Zehmet olmasa xanani doldurun")
+  return
+}
+option.innerHTML = bookType
+selectForm.appendChild(option)
+document.querySelector("#BooktypeText").value = ""
 })
