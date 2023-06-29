@@ -46,6 +46,14 @@ function debounce(func, wait) {
    .then((response)=>{
     return response.json()
    }).then(data=>{
+    let bookPublishDate =new Date(data.items[0].volumeInfo.publishedDate).getFullYear() 
+    if(bookPublishDate >=2023){
+      document.querySelector("#flexCheckDefault").checked = true
+    }else{
+      document.querySelector("#flexCheckDefault").checked = false
+
+    }
+
    document.querySelector("#Angels").value = data.items[0].volumeInfo.title
     document.querySelector("#authorName").value= data.items[0].volumeInfo.authors[0]
     document.querySelector("#BookImageUrl").value = data.items[0].volumeInfo.imageLinks.smallThumbnail

@@ -443,7 +443,8 @@
         onValue,
         remove,
         push,
-        get
+        get,
+        set
        
       } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
       // Initialize Firebase
@@ -565,7 +566,7 @@
       onValue(ref(database, "contact"), getPersonals);
       function getPersonals(snapshot) {
         const data = convertDataObj(snapshot.val());
-        console.log(data);
+      //  console.log(data);
         document.querySelector("#tbody").innerHTML = data.map((person) => {
           return `
 
@@ -599,7 +600,7 @@ function removePerson(id){
    $(document).ready(function(){
   $(document).on("click",".delete",function(){
     const el = $(this).data().value
-    console.log(el)
+   // console.log(el)
     removePerson(el)
   })
 })
@@ -609,7 +610,7 @@ onValue(ref(database, "join"), getJoinPerson);
 
 function getJoinPerson(snapshot){
   const data = convertDataObj(snapshot.val());
-  console.log(data)
+//  console.log(data)
 document.querySelector("#JoinTbody").innerHTML = data.map(joinPerson=>{
 
   return     `
@@ -648,10 +649,12 @@ $(document).ready(function(){
 document.querySelector("#submit").addEventListener("click",function(){
   const database = getDatabase(app);
  const userRef = ref(database, "bookData/"); 
+ const catalogRef = ref(database, "catalog/");
 const bookName = document.querySelector("#Angels").value.trim()
 const authorName = document.querySelector("#authorName").value.trim()
 const BookImageUrl = document.querySelector("#BookImageUrl").value.trim()
 const selectOption = document.querySelector(".optionName").value
+console.log(selectOption)
 const checkList = document.querySelector("#flexCheckDefault").checked
 if (!bookName || !authorName ||!BookImageUrl || !selectOption  ) {
             toastr.warning('Please Fill in the Field!');
@@ -671,7 +674,12 @@ if (!bookName || !authorName ||!BookImageUrl || !selectOption  ) {
           document.querySelector("#Angels").value=""
           document.querySelector("#authorName").value=""
           document.querySelector("#BookImageUrl").value=""
-      
+
+          const catalogs = {
+            selectOption
+          }
+          push(catalogRef, catalogs);
+
 
 })
 // get
@@ -683,7 +691,7 @@ get(ref(database,"bookData")).then((snapshot)=>{
 
 document.querySelector("#selectForm").innerHTML = data.map(option =>{
   return `
-  <option >${option.selectOption}</option>
+  <option data-value ="${option.selectOption} class="optionName" >${option.selectOption}</option>
 
   ` })
   }
@@ -693,7 +701,7 @@ document.querySelector("#selectForm").innerHTML = data.map(option =>{
 // Push aboutStore
  document.querySelector("#submit1").addEventListener("click",function(){
   const database = getDatabase(app);
- const userRef = ref(database, "aboutStore/"); 
+ const userRef = ref(database, "aboutStore"); 
 
   const AboutTitle = document.querySelector("#AboutStore").value
  const imgUrl = document.querySelector("#BookImageUrl1").value
@@ -713,7 +721,7 @@ if(!AboutTitle ||!imgUrl ||!descr){
 
           toastr.success('Data has been successfully added to the database!');
 
-          push(userRef, aboutdataInformaition);
+          set(userRef, aboutdataInformaition);
           document.querySelector("#AboutStore").value =""
           document.querySelector("#BookImageUrl1").value =""
           document.querySelector("#textArea1").value =""
