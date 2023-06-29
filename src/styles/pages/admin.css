@@ -394,3 +394,22 @@ overflow-y: auto;
     color: #ffffff;
     width: 10%;
   }
+  #typeofBook{
+    display: flex;
+    justify-content: space-between;
+    
+      }
+    
+      #left{
+        width: 35%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+      }
+      #right{
+        width: 40%;
+        display: flex;
+        align-items: center;
+        display: none;
+    
+    }
