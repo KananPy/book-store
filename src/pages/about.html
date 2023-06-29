@@ -16,6 +16,9 @@
 
   <link rel="stylesheet" href="../styles/pages/about.css" />
   <link rel="stylesheet" href="../styles/response/aboutResponse.css" />
+      <!--Circle Progress Plugin Css-->
+      <link rel="stylesheet" href="../styles/general/jquery.shCircleLoader.css">
+
 </head>
 
 <body>
@@ -60,7 +63,9 @@
 
   <main>
     <section id="section-about">
-      <div id="left-section-about">
+
+
+      <!-- <div id="left-section-about">
         <h3 id="about-Title">About Store</h3>
         <p id="about-Paragraf">
           We work without holidays and weekends! Residents of Kiev can receive
@@ -71,10 +76,11 @@
           available methods, exact terms and cost of delivery during checkout
           in the order basket, after selecting the delivery city.
         </p>
-      </div>
+      </div> -->
       <div id="right-section-about">
-        <img src="../assents/images/book.svg" alt="" id="about-bookImg">
-      </div>
+        <div class="example"></div>
+
+      </div> 
     </section>
     <section id="section-5">
       <div class="social-media-text h2">Follow us on social media</div>
@@ -196,6 +202,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
     integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../js/CircleProgressPlugins/jquery.shCircleLoader-min.js"></script>
+    <script src="../js/CircleProgressPlugins/jquery.shCircleLoader.js"></script>
+
   <script src="../js/firebaseJs/db.js"></script>
   <script type="module">
     // Import the functions you need from the SDKs you need
@@ -216,20 +225,35 @@
     const sectionAbout = document.querySelector('#section-about')
 
 
+    $('.example').shCircleLoader({
+      color:"#720418",
+      width:"10px",
+      height:"10px"
+      
+    });
 
 
     get(userDb)
       .then((snapshot) => {
         if (snapshot.exists()) {
-          sectionAbout.innerHTML = `<div id="left-section-about">
-      <h3 id="about-Title">${snapshot.val().AboutTitle}</h3>
+          const data = convertDataObj(snapshot.val());
+console.log(data)
+
+sectionAbout.innerHTML = data.map(about=>{
+  return `
+  <div id="left-section-about">
+      <h3 id="about-Title">${data[0].AboutTitle}</h3>
       <p id="about-Paragraf">
-        ${snapshot.val().descr}
+        ${data[0].descr}
       </p>
     </div>
     <div id="right-section-about">
-      <img src="${snapshot.val().imgUrl}" alt="" id="about-bookImg">
-    </div>`
+      <img src="${data[0].imgUrl}" alt="" id="about-bookImg">
+    </div>
+  
+  `
+})
+   
         }
       })
 
@@ -286,7 +310,7 @@
       }
     });
   </script>
-
+<script src="../js/convertDataObj.js"></script>
 </body>
 
 </html>
