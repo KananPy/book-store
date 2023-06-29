@@ -116,18 +116,22 @@ main {
   margin-left: 181px;
   padding-top: 15px;
 }
+.all_div{
+  margin-right: 28px;
+}
 .scroll_div {
   overflow-x: auto;
-  height: 3px;
+  /* height: 3px;
   margin-top: 80px;
-  padding-left: 84px;
+  padding-left: 84px;*/
   margin-left: -6px;
   width: 45%;
   display: flex;
-  flex-direction: row;
+  flex-direction: row; 
 }
 .scroll_div div {
-  padding-left: 53px !important;
+   padding-left: 53px !important;
+  padding-bottom: 24px; 
 }
 
 #section_third {
@@ -162,3 +166,4 @@ main {
   border-radius: 0.3rem;
   cursor: pointer;
 }
+

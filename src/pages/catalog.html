@@ -30,14 +30,14 @@
     <header id="header" class="pt-3">
       <div class="container d-flex justify-content-around align-items-center">
         <div id="logo">
-          <a href="/book-store/index.html" id="link">
+          <a href="/index.html" id="link">
             <img src="../assents/icons/logo-color.svg" alt="" />
           </a>
         </div>
         <nav id="nav-header">
           <ul class="nav-list d-flex">
             <li class="nav-item">
-              <a href="/book-store/index.html" id="nav-link" class="nav-link"
+              <a href="/index.html" id="nav-link" class="nav-link"
                 >Home</a
               >
             </li>
@@ -92,14 +92,14 @@
           <div class="all_div">All</div>
           <div class="scroll_div">
            
-            <div>Fantastic</div>
+            <!-- <div>Fantastic</div>
             <div>Besteller</div>
             <div>Roman</div>
             <div>Classic</div>
             <div>Funny</div>
             <div>Reality</div>
             <div>Relationship</div>
-            <div>Detective</div>
+            <div>Detective</div> -->
           </div>
         </div>
       </aside>
@@ -669,6 +669,7 @@
         getDatabase,
         ref,
         push,
+        get
       } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
       const app = initializeApp(firebaseConfig);
       const database = getDatabase(app);
@@ -721,7 +722,23 @@
             }, 2000);
           }
         });
-    </script>
+        get(ref(database,"catalog")).then((snapshot)=>{
+          if(snapshot.exists()){
+    const data = convertDataObj(snapshot.val());
 
+   console.log("data",data)
+
+document.querySelector(".scroll_div").innerHTML = data.map(option =>{
+  console.log(option[1])
+  return `
+  <div >${option.selectOption}.</div>
+
+  ` }).join("")
+  }
+
+
+        })
+    </script>
+<script src="../js/convertDataObj.js"></script>
   </body>
 </html>
