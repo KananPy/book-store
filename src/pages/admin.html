@@ -173,7 +173,7 @@
           <form action="" id="form-2">
             <label for="About Store" class="form-label mt-2">Title</label>
             <br />
-            <input id="About Store" type="text" class="form-control" placeholder="About Store" aria-label="About Store"
+            <input id="AboutStore" type="text" class="form-control" placeholder="About Store" aria-label="About Store"
               aria-describedby="addon-wrapping" />
             <br />
             <label for="BookImageUrl" class="form-label mt-2">Book Image Url</label>
@@ -184,10 +184,10 @@
 
             <div class="mb-3">
               <label for="textArea" class="form-label">Description</label>
-              <textarea class="form-control" id="textArea" rows="3"
+              <textarea class="form-control" id="textArea2" rows="3"
                 placeholder="We work without holidays and weekends! Resident...We work without holidays and weekends! Resident...We work without holidays and weekends! Resident..."></textarea>
             </div>
-            <button type="submit" class="btn mt-2 w-100" id="submit">
+            <button type="submit" class="btn mt-2 w-100" id="submit2">
               Add
             </button>
           </form>
@@ -294,7 +294,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
-  <script src="../js/firebaseJs/db.js"></script>
+
 
   <script type="module">
     // Import the functions you need from the SDKs you need
@@ -305,10 +305,64 @@
       onAuthStateChanged,
       signOut
     } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
-    
+    import {
+      getDatabase,
+      ref,
+      set,
+    } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
+
     // Initialize Firebase
+    const firebaseConfig = {
+    apiKey: "AIzaSyD84O_Gy5jdZfcYfergx2kPBu5-APNQ3ug",
+    authDomain: "library-project-ad153.firebaseapp.com",
+    databaseURL: "https://library-project-ad153-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "library-project-ad153",
+    storageBucket: "library-project-ad153.appspot.com",
+    messagingSenderId: "209210870711",
+    appId: "1:209210870711:web:3446eaacf65c7f1e6a7632"
+  };
+
+
     const app = initializeApp(firebaseConfig);
     const auth = getAuth(app)
+
+    // getting data to firebase and from firebase
+
+
+
+    const db = getDatabase(app)
+
+    const aboutStore = document.querySelector("#AboutStore")
+    const bookImage = document.querySelector("#BookImageUrl")
+    const aboutText = document.querySelector("#textArea2")
+    const addBtn = document.querySelector("#submit2")
+
+
+
+
+
+    console.log(aboutStore.value);
+
+
+
+
+
+    addBtn.addEventListener("click", (e) => {
+      e.preventDefault()
+      console.log(aboutStore, bookImage, aboutText);
+      set(ref(db, "aboutStore/"), {
+          AboutTitle: aboutStore.value,
+          imgUrl: bookImage.value,
+          descr: aboutText.value
+        })
+        .then(() => {
+          alert("Data added succesfully")
+        })
+        .catch((error) => {
+          alert("doesnt work",error)
+        })
+    })
+    // getDatabase ending line
 
 
     const Mybody = document.querySelector("body")
@@ -391,7 +445,7 @@
 
           }, 1500);
         }
-       
+
       })
     }
 

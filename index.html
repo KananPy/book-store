@@ -193,11 +193,11 @@
 
          <button class="w-75 mb-3 p-2 " id="modalBtn">Join</button>
                 </div>
-             
+
               </div>
             </div>
           </div>
-    
+
     </main>
     <footer id="footer-logo" class="pt-3">
       <section id="footer-top">
@@ -318,7 +318,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script> -->
-
+      <script src="../book-store/src/js/home.js"></script>
     <script src="./src/js/firebaseJs/db.js"></script>
     <script type="module">
         // Import the functions you need from the SDKs you need
@@ -326,29 +326,29 @@
         import {
           getDatabase,
           ref,
-          push, 
+          push,
         } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
         const app = initializeApp(firebaseConfig);
         const database = getDatabase(app);
-  
-  
-  
+
+
+
         document.querySelector("#modalBtn").addEventListener("click", function () {
           const database = getDatabase(app);
             const userRef = ref(database, "join/"); // push ile bele edirik
-  
+
           const ModalfullName = document.querySelector("#modalFullName").value;
           const Modalemail = document.querySelector("#modalEmail").value;
          if(!ModalfullName || !Modalemail){
 
-            showAlert("danger","Please Fill in the Field")         
+            showAlert("danger","Please Fill in the Field")
                return
          }
           const person = {
             ModalfullName,
             Modalemail
           }
-          showAlert("success","Our team will contact you shortly")         
+          showAlert("success","Our team will contact you shortly")
 
            push(userRef, person);
            document.querySelector("#modalFullName").value = ""
@@ -384,6 +384,6 @@
     }
         });
       </script>
-  
+
   </body>
 </html>
