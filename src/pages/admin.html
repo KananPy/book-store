@@ -289,10 +289,10 @@
           <div id="about" class="w-100 form-section-2 mb-5">
             <h3 id="about-store-title">About Store</h3>
             <form action="" id="form-2">
-              <label for="About Store" class="form-label mt-2">Title</label>
+              <label for="AboutStore" class="form-label mt-2">Title</label>
               <br />
               <input
-                id="About Store"
+                id="AboutStore"
                 type="text"
                 class="form-control"
                 placeholder="About Store"
@@ -300,12 +300,12 @@
                 aria-describedby="addon-wrapping"
               />
               <br />
-              <label for="BookImageUrl" class="form-label mt-2"
+              <label for="BookImageUrl1" class="form-label mt-2"
                 >Book Image Url</label
               >
               <br />
               <input
-                id="BookImageUrl"
+                id="BookImageUrl1"
                 type="text"
                 class="form-control"
                 placeholder="https://image:url/"
@@ -315,15 +315,15 @@
               <br />
 
               <div class="mb-3">
-                <label for="textArea" class="form-label">Description</label>
+                <label for="textArea1" class="form-label">Description</label>
                 <textarea
                   class="form-control"
-                  id="textArea"
+                  id="textArea1"
                   rows="3"
                   placeholder="We work without holidays and weekends! Resident...We work without holidays and weekends! Resident...We work without holidays and weekends! Resident..."
                 ></textarea>
               </div>
-              <button type="submit" class="btn mt-2 w-100 p-3" id="submit">
+              <button type="button" class="btn mt-2 w-100 p-3" id="submit1">
                 Add
               </button>
             </form>
@@ -651,9 +651,8 @@ document.querySelector("#submit").addEventListener("click",function(){
 const bookName = document.querySelector("#Angels").value.trim()
 const authorName = document.querySelector("#authorName").value.trim()
 const BookImageUrl = document.querySelector("#BookImageUrl").value.trim()
-const selectOption = document.querySelector(".optionName").value.trim()
+const selectOption = document.querySelector(".optionName").value
 const checkList = document.querySelector("#flexCheckDefault").checked
-
 if (!bookName || !authorName ||!BookImageUrl || !selectOption  ) {
             toastr.warning('Please Fill in the Field!');
            return
@@ -669,8 +668,10 @@ if (!bookName || !authorName ||!BookImageUrl || !selectOption  ) {
           toastr.success('Data has been successfully added to the database!');
           push(userRef, BookdataInformation);
 
-
-
+          document.querySelector("#Angels").value=""
+          document.querySelector("#authorName").value=""
+          document.querySelector("#BookImageUrl").value=""
+      
 
 })
 // get
@@ -678,7 +679,7 @@ get(ref(database,"bookData")).then((snapshot)=>{
   if(snapshot.exists()){
     const data = convertDataObj(snapshot.val());
 
-    console.log("data",data)
+   // console.log("data",data)
 
 document.querySelector("#selectForm").innerHTML = data.map(option =>{
   return `
@@ -687,6 +688,36 @@ document.querySelector("#selectForm").innerHTML = data.map(option =>{
   ` })
   }
 })
+ 
+
+// Push aboutStore
+ document.querySelector("#submit1").addEventListener("click",function(){
+  const database = getDatabase(app);
+ const userRef = ref(database, "aboutStore/"); 
+
+  const AboutTitle = document.querySelector("#AboutStore").value
+ const imgUrl = document.querySelector("#BookImageUrl1").value
+ const descr = document.querySelector("#textArea1").value
+if(!AboutTitle ||!imgUrl ||!descr){
+  toastr.warning('Please Fill in the Field!');
+           return
+
+
+}
+  const aboutdataInformaition = {
+    AboutTitle,
+    imgUrl,
+    descr,
+          };
+
+
+          toastr.success('Data has been successfully added to the database!');
+
+          push(userRef, aboutdataInformaition);
+          document.querySelector("#AboutStore").value =""
+          document.querySelector("#BookImageUrl1").value =""
+          document.querySelector("#textArea1").value =""
+ })
 
     </script>
     <script src="../js/convertDataObj.js"></script>
