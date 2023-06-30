@@ -1,0 +1,43 @@
+@media only screen and (max-width: 480px){
+   
+    .besteller{
+        margin-left: 38px;
+    }
+    
+    .releases {
+        margin-left: 52px
+    }
+
+    #catalogpagesection{
+        margin-bottom: 239px;
+    }
+
+    #section-5{
+        margin-bottom: -205px;
+    }
+
+    .all_bookdiv{
+        position: relative;
+        left: -9px;
+    }
+
+    .book_container{
+        margin-top: 66px
+    }
+
+    .scrool_div::-webkit-scrollbar{
+        display: none;
+    }
+
+    .scrool_div{
+        position: relative;
+        top: 64px;
+        left: -404px;
+    }
+
+    .new_icon{
+        position: absolute;
+        top: 8px;
+        left: 111px
+    }
+};
