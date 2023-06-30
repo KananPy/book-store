@@ -115,6 +115,8 @@ section form button img{
 }
 
 .text_anonim_two{
+    width: 686px;
+    height: 100px;
     width: 52%;
     font-size: 16px;
     font-family: 'Rubik', sans-serif;
@@ -127,6 +129,8 @@ section form button img{
 }
 
 .text_area{  
+    width: 686px;
+    height: 100px;
     text-align: left;
     padding-bottom: 15px;
 }
@@ -138,6 +142,7 @@ section form button img{
     line-height: 24px;
 }
 .text_area_two{
+   
     font-size: 16px;
     font-family: 'Rubik', sans-serif;  
     font-weight: 400;
