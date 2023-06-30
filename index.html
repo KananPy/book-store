@@ -26,7 +26,7 @@
     <header id="header" class="pt-3 ">
       <div class="container d-flex justify-content-around align-items-center">
         <div id="logo">
-          <a href="../book-store/index.html" id="link">
+          <a href="./index.html" id="link">
             <img src="./src/assents/icons/logo-color.svg " alt="" />
           </a>
         </div>
@@ -34,14 +34,14 @@
           <ul class="nav-list d-flex">
             <li class="nav-item">
               <a
-                href="../BOOK-STORE/index.html "
+                href="./index.html "
                 id="active-item"
                 class="nav-link nav-active"
                 >Home</a
               >
             </li>
             <li class="nav-item">
-              <a href="./src/pages/" id="nav-link" class="nav-link"
+              <a href="./src/pages/catalog.html" id="nav-link" class="nav-link"
                 >Catalog</a
               >
             </li>
@@ -104,7 +104,7 @@
       <section id="section-2">
         <h2 id="catalog-title">Catalog</h2>
         <div id="catalogs">
-          <div class="catalog catalog-1"><a href="">Books</a></div>
+          <div class="catalog catalog-1"><a href="./src/pages/catalog.html">Books</a></div>
           <div class="catalog catalog-2"><a href="">Electronic books</a></div>
           <div class="catalog catalog-3"><a href="">Audiobooks</a></div>
           <div class="catalog catalog-4"><a href="">Toys, creativity</a></div>
@@ -327,6 +327,7 @@
           getDatabase,
           ref,
           push, 
+          get
         } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
         const app = initializeApp(firebaseConfig);
         const database = getDatabase(app);
@@ -383,7 +384,24 @@
 
     }
         });
+
+// get
+get(ref(database,"catalog")).then((snapshot)=>{
+  if(snapshot.exists()){
+    const data = convertDataObj(snapshot.val());
+
+   console.log("data",data)
+
+document.querySelector("#catalogs").innerHTML = data.map(option =>{
+  console.log(option[1])
+  return `
+  <div class="catalog catalog-1"><a href="../src/pages/catalog.html">${option.selectOption}.</a></div>
+
+  ` }).join("")
+  }
+})
       </script>
+      <script src="./src/js/convertDataObj.js"></script>
   
   </body>
 </html>

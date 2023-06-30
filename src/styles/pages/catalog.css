@@ -107,6 +107,41 @@ main {
   line-height: 50px;
   margin-left: 45%;
 }
+.container_div {
+  margin-left: 469px;
+  display: flex;
+  flex-direction: row;
+}
+.all_books {
+  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
+  display: inline-block;
+  font-weight: 900;
+  line-height: 49px;
+  letter-spacing: 0em;
+  text-align: left;
+  position: relative;
+  top: 37px;
+  margin-left: 181px;
+  padding-top: 15px;
+}
+.all_div{
+  margin-right: 28px;
+}
+.scroll_div {
+  overflow-x: auto;
+  /* height: 3px;
+  margin-top: 80px;
+  padding-left: 84px;*/
+  margin-left: -6px;
+  width: 45%;
+  display: flex;
+  flex-direction: row; 
+}
+.scroll_div div {
+   padding-left: 53px !important;
+  padding-bottom: 24px; 
+}
 
 
 #section_third {
@@ -141,6 +176,7 @@ main {
   border-radius: 0.3rem;
   cursor: pointer;
 }
+
 .book_container{
   display: flex;
   justify-content: center;
@@ -232,3 +268,4 @@ main {
 .text_anonim_two{
   height: 183px;
 }
+
